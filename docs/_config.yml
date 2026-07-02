@@ -1,4 +1,4 @@
 title: Cosmetics E-Commerce Platform
 description: แพลตฟอร์มอีคอมเมิร์ซร้านน้ำหอม — เอกสารสถาปัตยกรรมระบบ
 theme: minima
-# minima โหลด _includes/custom-head.html อัตโนมัติ → ใช้ฉีดสคริปต์ Mermaid
+# _includes/head.html (override minima 2.5) → include custom-head.html ที่ฉีดสคริปต์ Mermaid

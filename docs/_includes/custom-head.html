@@ -9,5 +9,8 @@
     pre.textContent = el.textContent.trim();
     el.replaceWith(pre);
   });
-  mermaid.initialize({ startOnLoad: true, theme: "neutral" });
+  // ES module รันแบบ defer → event load มัก fire ไปแล้ว startOnLoad จึงไม่ทำงาน
+  // เรียก run() เองหลัง replace เสร็จให้ชัวร์
+  mermaid.initialize({ startOnLoad: false, theme: "neutral" });
+  mermaid.run();
 </script>

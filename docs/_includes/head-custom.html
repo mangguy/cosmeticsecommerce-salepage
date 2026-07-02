@@ -1,0 +1,12 @@
+<!-- ทำให้บล็อก ```mermaid render บน GitHub Pages (ธีม Jekyll minima ไม่ทำให้เอง) -->
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  // Jekyll (rouge) แปลง ```mermaid เป็น <pre><code class="language-mermaid">
+  // แปลงกลับเป็น <pre class="mermaid"> ให้ mermaid หาเจอ
+  document.querySelectorAll("code.language-mermaid").forEach((el) => {
+    const pre = el.parentElement;
+    pre.className = "mermaid";
+    pre.textContent = el.textContent;
+  });
+  mermaid.initialize({ startOnLoad: true, theme: "neutral" });
+</script>

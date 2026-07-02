@@ -1,0 +1,22 @@
+# deps
+node_modules/
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# editor / os
+.DS_Store
+.vscode/
+.idea/
+
+# astro
+dist/
+.astro/

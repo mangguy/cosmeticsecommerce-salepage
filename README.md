@@ -1,23 +1,23 @@
 # cosmeticsecommerce-salepage
 
-Customer-facing website for the **Cosmetics E-Commerce Platform** (Perfume Store).
+เว็บไซต์สำหรับลูกค้า (Customer Website) ของ **Cosmetics E-Commerce Platform** (ร้านขายน้ำหอม)
 
-## Project Overview
+## ภาพรวมโปรเจกต์ (Project Overview)
 
-Public storefront where customers browse and buy perfumes. Consumes the
-`cosmeticsecommerce-server` REST API. This repo also hosts the project
-**documentation** (`docs/`) and publishes it via **GitHub Pages**.
-Part of a 3-repository system: `cosmeticsecommerce-dashboard`,
-`cosmeticsecommerce-server`, and **salepage** (this repo).
+หน้าร้านสาธารณะที่ลูกค้าใช้เลือกดูและซื้อสินค้าน้ำหอม เชื่อมต่อกับ REST API ของ
+`cosmeticsecommerce-server` นอกจากนี้ repo นี้ยังเก็บ **เอกสารโครงการ** (`docs/`)
+และเผยแพร่ผ่าน **GitHub Pages**
+เป็นส่วนหนึ่งของระบบที่ประกอบด้วย 3 Repository ได้แก่ `cosmeticsecommerce-dashboard`,
+`cosmeticsecommerce-server` และ **salepage** (repo นี้)
 
-## Technology Stack
+## เทคโนโลยีที่ใช้ (Technology Stack)
 
 - **Astro**
 - **TypeScript**
 - **Tailwind CSS**
-- **Supabase** — data via the backend API
+- **Supabase** — ดึงข้อมูลผ่าน Backend API
 
-## Folder Structure
+## โครงสร้างโฟลเดอร์ (Folder Structure)
 
 ```
 cosmeticsecommerce-salepage/
@@ -25,56 +25,56 @@ cosmeticsecommerce-salepage/
 ├── LICENSE
 ├── .gitignore
 ├── .env.example
-├── docs/                 # project documentation (GitHub Pages source)
+├── docs/                 # เอกสารโครงการ (แหล่งข้อมูลสำหรับ GitHub Pages)
 │   ├── index.md
 │   ├── analysis.md
 │   ├── design.md
 │   ├── prd.md
-│   └── architecture.md   # Mermaid system diagram
-└── (app source — added in Workshop 2)
+│   └── architecture.md   # แผนภาพระบบด้วย Mermaid
+└── (ซอร์สโค้ดของแอป — จะเพิ่มใน Workshop 2)
 ```
 
-## Installation
+## การติดตั้ง (Installation)
 
 ```bash
 git clone https://github.com/<owner>/cosmeticsecommerce-salepage.git
 cd cosmeticsecommerce-salepage
-cp .env.example .env   # fill SUPABASE_URL / SUPABASE_ANON_KEY
+cp .env.example .env   # ใส่ค่า SUPABASE_URL / SUPABASE_ANON_KEY
 npm install
 ```
 
-## Development
+## การพัฒนา (Development)
 
 ```bash
-npm run dev      # start dev server
-npm run build    # production build
-npm run preview  # preview build
+npm run dev      # เริ่มเซิร์ฟเวอร์สำหรับพัฒนา
+npm run build    # build สำหรับ production
+npm run preview  # พรีวิวผลลัพธ์ที่ build แล้ว
 ```
 
-> App scaffolding lands in Workshop 2. This repo currently holds project
-> foundation and documentation.
+> โครงสร้างของแอปจะเริ่มสร้างใน Workshop 2 ปัจจุบัน repo นี้มีเพียงส่วน
+> Foundation ของโปรเจกต์และเอกสารเท่านั้น
 
-## Documentation & GitHub Pages
+## เอกสารและ GitHub Pages (Documentation & GitHub Pages)
 
-Docs live in [`docs/`](./docs/). To publish via GitHub Pages:
-**Settings → Pages → Source: `Deploy from a branch` → Branch `main` / folder `/docs`**.
-Published URL: `https://<owner>.github.io/cosmeticsecommerce-salepage/`.
+เอกสารอยู่ในโฟลเดอร์ [`docs/`](./docs/) วิธีเผยแพร่ผ่าน GitHub Pages:
+**Settings → Pages → Source: `Deploy from a branch` → Branch `main` / folder `/docs`**
+URL ที่เผยแพร่: `https://<owner>.github.io/cosmeticsecommerce-salepage/`
 
-GitHub renders the Markdown (and Mermaid diagrams) automatically.
+GitHub จะเรนเดอร์ไฟล์ Markdown (รวมถึงแผนภาพ Mermaid) ให้โดยอัตโนมัติ
 
-## Branch Strategy
+## กลยุทธ์การใช้ Branch (Branch Strategy)
 
-- `main` — production-ready, protected
-- `develop` — integration branch
-- `feature/*` — one branch per feature, merged into `develop`
+- `main` — พร้อมขึ้น production, มีการป้องกัน (protected)
+- `develop` — branch สำหรับรวมงาน (integration)
+- `feature/*` — หนึ่ง branch ต่อหนึ่งฟีเจอร์ แล้ว merge เข้า `develop`
 
-Commits follow [Conventional Commits](https://www.conventionalcommits.org/)
-(`feat:`, `fix:`, `docs:`, `chore:` …).
+ข้อความ commit ใช้รูปแบบ [Conventional Commits](https://www.conventionalcommits.org/)
+(`feat:`, `fix:`, `docs:`, `chore:` …)
 
-## Future Features
+## ฟีเจอร์ในอนาคต (Future Features)
 
-- Product listing & detail pages
-- Cart & checkout
-- Customer auth (Supabase)
-- Search & filtering
-- Order tracking
+- หน้ารายการสินค้าและหน้ารายละเอียดสินค้า
+- ตะกร้าสินค้าและการชำระเงิน
+- ระบบสมาชิกลูกค้า (Supabase Auth)
+- การค้นหาและการกรองสินค้า
+- ติดตามสถานะคำสั่งซื้อ
